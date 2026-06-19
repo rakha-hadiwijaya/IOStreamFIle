@@ -53,6 +53,14 @@ public class BukuKontak {
             System.out.println("Gagal memuat dari : " + e.getMessage());
         }
     }
+    public Kontak cariKontak(String nama){
+        for(Kontak k : daftar){
+            if(k.getNama().equalsIgnoreCase(nama)){
+                return k;
+            }
+        }
+        return null;
+    }
     
     public int jumlahKontak(){
         return daftar.size();
