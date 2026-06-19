@@ -62,6 +62,17 @@ public class BukuKontak {
         return null;
     }
     
+    public void hapusKontak(String nama){
+        for(int i = 0; i<daftar.size(); i++){
+            if(daftar.get(i).getNama().equalsIgnoreCase(nama)){
+                daftar.remove(i);
+                System.out.println("Kontak " + nama + " berhasil dihapus.");
+                return;
+            }
+        }
+        System.out.println("Kontak " + nama + " tidak ditemukan.");
+    }
+    
     public int jumlahKontak(){
         return daftar.size();
     }
